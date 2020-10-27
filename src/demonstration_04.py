@@ -24,5 +24,12 @@ Notes:
 
 
 def emotify(txt):
-    # Your code here
+    replaceable = {'smile': ':D', 'grin': ':)', 'sad': ':(', 'mad': ':P'}
+    split_sentence = txt.split()
+    split_sentence[-1] = replaceable[split_sentence[-1]]
+    return ' '.join(split_sentence)
 
+
+print(emotify("Make me smile"))
+print(emotify("Make me grin"))
+print(emotify("Make me sad"))

@@ -12,6 +12,18 @@ Examples:
 Notes:
 - Bonus: Try to complete this challenge in one line!
 """
-def multiply_nums(nums):
-    # Your code here
+import math
 
+
+def multiply_nums(nums: str) -> int:
+    nums_list = nums.split(', ')
+    total = 1
+    for i in range(len(nums_list)):
+        total = int(nums_list[i]) * total
+    return total
+
+
+print(multiply_nums("2, 3"))
+print(multiply_nums("1, 2, 3, 4"))
+print(multiply_nums("54, 75, 453, 0"))
+print(multiply_nums("10, -2"))
