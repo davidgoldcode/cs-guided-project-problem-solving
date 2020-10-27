@@ -12,6 +12,15 @@ Examples:
 - repeat_it("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
 - repeat_it("cwAt") -> "C-Ww-Aaa-Tttt"
 """
-def repeat_it(input_str):
-    # Your code here
 
+
+def repeat_it(input_str):
+    new_list = list(input_str)
+    for i in range(len(new_list)):
+        new_list[i] = new_list[i].upper() + new_list[i].lower() * i
+    return '-'.join(new_list)
+
+
+print(repeat_it("abcd"))
+print(repeat_it("RqaEzty"))
+print(repeat_it("cwAt"))
