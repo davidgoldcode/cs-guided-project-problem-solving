@@ -9,7 +9,15 @@ Examples:
 - parity(1) -> "Odd"
 - parity(2) -> "Even"
 """
+
+
 def parity(input_int):
-    # Your code here
+    if int(input_int) % 2 == 0:
+        return 'Even'
+    else:
+        return 'Odd'
 
 
+print(parity(0))
+print(parity(1))
+print(parity(2))

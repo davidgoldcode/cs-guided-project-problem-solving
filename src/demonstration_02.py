@@ -14,7 +14,21 @@ Notes:
 - The input list will only contain integers.
 """
 
+from typing import List
 
-def add_indexes(numbers):
-    # Your code here
 
+def add_indexes(numbers: List[int]) -> List[int]:
+    return [idx + num for idx, num in enumerate(numbers)]
+
+# def add_indexes(numbers: List[int]) -> List[int]:
+#     output = []
+#     for i in range(len(numbers)):
+#         n = numbers[i]
+#         sum = n + i
+#         output.append(sum)
+#     return output
+
+
+print(add_indexes([0, 0, 0, 0, 0]))
+print(add_indexes([1, 2, 3, 4, 5]))
+print(add_indexes([5, 4, 3, 2, 1]))

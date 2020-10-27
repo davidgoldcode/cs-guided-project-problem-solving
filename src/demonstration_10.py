@@ -15,7 +15,16 @@ Notes:
 - The return string must be two numbers separated by a single space, and
 the maximum number is first.
 """
+
+
 def max_and_min(input_str):
-    # Your code here
+    str_digits = input_str.split(' ')
+    converted_list = [int(i) for i in str_digits]
+    num_max = max(converted_list)
+    num_min = min(converted_list)
+    return f'"{num_max}, {num_min}"'
 
 
+print(max_and_min("1 2 3 4 5"))
+print(max_and_min("1 2 -3 4 5"))
+print(max_and_min("1 9 3 4 -5"))
